@@ -39,3 +39,18 @@ def sort_files(source_path: str):
 
                 shutil.move(file_path, target_path)
 
+
+def remove_empty_folders(source_path: str):
+    """
+    Removes all empty folders.
+
+    :param source_path: Path to the directory containing empty folders
+    """
+    for root_dir, sub_dir, filenames in os.walk(source_path, topdown=False):
+        for current_dir in sub_dir:
+            folder_path: str = os.path.join(root_dir, current_dir)
+
+            if not os.listdir(folder_path):
+                os.rmdir(folder_path)
+
+

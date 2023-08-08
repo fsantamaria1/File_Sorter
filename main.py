@@ -4,10 +4,11 @@ import shutil
 
 def create_folder(path: str, extension: str) -> str:
     """
-    Creates a folder named after the given extension
-    :param path: path to the folder where the file is located
-    :param extension: extension of the file
-    :return: the path of the newly created folder
+    Creates a folder named after the given extension.
+
+    :param path: Path to the folder where the file is located.
+    :param extension: Extension of the file.
+    :return: The path of the newly created folder.
     """
 
     # Set the folder name to the extension without the dot
